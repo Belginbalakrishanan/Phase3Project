@@ -1,0 +1,25 @@
+﻿@model Product
+<br />
+<h1>Update the Laptop</h1>
+<hr />
+<form method="post">
+    <input asp-for="LaptopId" hidden />
+    <div class="form-group row">
+        <label class="form-label mt-4" asp-for="LaptopName"></label>
+        <input class="form-control" type="text" asp-for="LaptopName" />
+        <span asp-validation-for="LaptopName"></span>
+    </div>
+    <div class="form-group row">
+        <label class="form-label mt-4" asp-for="LaptopDescription"></label>
+        <input class="form-control" type="text" asp-for="LaptopDescription" />
+        <span asp-validation-for="LaptopDescription"></span>
+    </div>
+    <div class="form-group row">
+        <label class="form-label mt-4" asp-for="LaptopRate"></label>
+        <input class="form-control" type="number" asp-for="LaptopRate" />
+        <span asp-validation-for="LaptopRate"></span>
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Update</button>
+    <button asp-action="Index" class="btn btn-outline-dark">Index</button>
+</form>

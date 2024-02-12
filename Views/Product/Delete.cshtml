@@ -1,0 +1,24 @@
+﻿@model Product
+<br />
+<h1>Are you sure you want to delete this product?</h1>
+<hr />
+<form method="post">
+    <div class="form-group row">
+        <label class="form-label mt-4" asp-for="LaptopName"></label>
+        <input class="form-control" type="text" asp-for="LaptopName" />
+        <span asp-validation-for="LaptopName"></span>
+    </div>
+    <div class="form-group row">
+        <label class="form-label mt-4" asp-for="LaptopDescription"></label>
+        <input class="form-control" type="text" asp-for="LaptopDescription" />
+        <span asp-validation-for="LaptopDescription"></span>
+    </div>
+    <div class="form-group row">
+        <label class="form-label mt-4" asp-for="LaptopRate"></label>
+        <input class="form-control" type="number" asp-for="LaptopRate" />
+        <span asp-validation-for="LaptopRate"></span>
+    </div>
+    <br />
+    <button class="btn btn-outline-danger">Delete</button>
+    <button asp-action="Index" class="btn btn-outline-dark">Index</button>
+</form>
